@@ -49,9 +49,9 @@ t_statistic = (mean_et - mean_reg) / standard_error_diff
 degrees_of_freedom = min(n_reg - 1, n_et - 1)
 p_value = 2 * stats.t.sf(abs(t_statistic), df=degrees_of_freedom)
 
-print("\ntwo-sample t-test (seperate variances, conservative df)")
-print("mean differnce (extra time/pens minus regulation):", mean_et - mean_reg)
-print("standard error of differnce:", standard_error_diff)
+print("\ntwo-sample t-test (separate variances, conservative df)")
+print("mean difference (extra time/pens minus regulation):", mean_et - mean_reg)
+print("standard error of difference:", standard_error_diff)
 print("degrees of freedom:", degrees_of_freedom)
 print("t statistic:", t_statistic)
 print("p value:", p_value)
