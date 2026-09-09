@@ -47,7 +47,7 @@ n_et = len(et)
 standard_error_diff = np.sqrt((std_reg ** 2 / n_reg) + (std_et ** 2 / n_et))
 t_statistic = (mean_et - mean_reg) / standard_error_diff
 degrees_of_freedom = min(n_reg - 1, n_et - 1)
-P_value = 2 * stats.t.sf(abs(t_statistics), df=degrees_of_freedom)
+p_value = 2 * stats.t.sf(abs(t_statistic), df=degrees_of_freedom)
 
 print("\ntwo-sample t-test (seperate variances, conservative df)")
 print("mean differnce (extra time/pens minus regulation):", mean_et - mean_reg)
